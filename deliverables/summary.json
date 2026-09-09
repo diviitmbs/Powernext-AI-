@@ -1,0 +1,33 @@
+{
+    "team_name": "PowerNext_AI",
+    "records_analysed": 350,
+    "abnormal_records_identified": 28,
+    "valid_records_identified": 322,
+    "min_predicted_reference": 12.81,
+    "max_predicted_reference": 57.65,
+    "avg_predicted_reference": 26.36,
+    "top_3_attention_test_ids": [
+        "TST-0315",
+        "TST-0244",
+        "TST-0142"
+    ],
+    "anomaly_rules_breakdown": {
+        "rule_1_sentinels_negative": 7,
+        "rule_2_duplicate_fingerprint": 8,
+        "rule_3_sensor_s2_anomaly": 3,
+        "rule_4_sensor_s3_spike": 1,
+        "rule_5_near_zero_s1": 2,
+        "total_rule_flagged": 20
+    },
+    "validation_metrics": {
+        "validity_classifier_roc_auc": 0.9421,
+        "validity_classifier_f1_valid": 0.9675,
+        "validity_classifier_f1_invalid": 0.729,
+        "regressor_ensemble_rmse": 0.8854,
+        "regressor_ensemble_r2": 0.9932,
+        "regressor_xgb_rmse": 0.8009,
+        "regressor_rf_rmse": 1.4169,
+        "regressor_ridge_rmse": 1.5444
+    },
+    "approach": "Decoupled physics-informed ML pipeline. Deterministic domain rules isolate sentinel logging faults and duplicate measurement fingerprints with 100% precision. Residual invalidity is classified via an XGBoost classifier trained on 5-fold Stratified CV. Target hot-spot temperature rise is predicted using an optimized weighted ensemble (60% XGBoost, 30% Random Forest, 10% Ridge) trained strictly on verified valid records to eliminate fault noise. Sensor_S4 dropped due to near-zero physical correlation. Engineered features reflect Joule heating (I\u00b2) and electrical power dissipation (I\u00b2\u00b7V)."
+}
