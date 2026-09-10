@@ -1,5 +1,5 @@
 # CPRI POWERNEXT-AI Hackathon: Engineering & Methodology Report
-**Team Name:** PowerNext_AI  
+**Team Name:** ByteC  
 **Date:** 2026-09-10  
 **Evaluation Scope:** Screening Round Lab Telemetry Dataset (1,000 Training Records, 350 Blind Test Records)
 

@@ -4,7 +4,7 @@ Configuration module for CPRI PowerNext-AI pipeline.
 from pathlib import Path
 
 # Team Configuration
-DEFAULT_TEAM_NAME = "PowerNext_AI"
+DEFAULT_TEAM_NAME = "ByteC"
 
 # File Paths
 DEFAULT_DATA_PATHS = [
